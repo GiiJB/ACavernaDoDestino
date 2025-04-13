@@ -3,6 +3,27 @@ import javax.swing.JOptionPane;
 
 public class Jogo {
     
+    public static void criatura(){
+        String escolha_str;
+        String menu3 = "**Combate**";
+        menu3 +="\nAventureiro(a) faça sua escolha:\n1- Enfrentar a criatura diretamente\n2- Dar um sanduíche com sonífero para ela";
+        escolha_str = JOptionPane.showInputDialog(null, menu3);
+        
+        for(int cont=1;cont<=3;cont++){
+            if(escolha_str.equalsIgnoreCase("1")){
+                JOptionPane.showMessageDialog(null, "GAME OVER\nAventureiro(a) infelizmente você não conseguiu fugir da criatura e ficou preso(a) na caverna para sempre...");
+                break;
+            }
+            else if(escolha_str.equalsIgnoreCase("2")){
+                JOptionPane.showMessageDialog(null, "PARABÉNS!\nVocê fez a criatura cair um um sono profundo e encontrou com ela um pergaminho que possuia um mapa que levava a uma saída secreta.\nDepois de seguir o mapa você conseguiu escapar e está livre da caverna.");
+                break;
+            }
+            else{
+               JOptionPane.showMessageDialog(null, "Essa escolha não existe, tente novamente.");
+            }
+        }      
+    }   
+      
     public static void mar(){
         String decisao_str;
         String menu2 = "***Hora da Grande Decisão***";
@@ -17,7 +38,8 @@ public class Jogo {
             }
             else if(decisao_str.equalsIgnoreCase("2")){
              JOptionPane.showMessageDialog(null,"Quando estava voltando, você encontrou uma criatura que guarda a caverna.\nAgora você precisará enfrentá-la...");
-             //Enfrentamento da criatura (Adicionar)
+             JOptionPane.showMessageDialog(null, "A criatura é muito grande e assutadora, você tem duas opções:\n1- A primeira é enfrentá-la e tentar a sorte de conseguir escapar dela.\n2- A segunda é utilizar o sanduíche que você tem na bolsa com um pouco de sonífero, isso fará com que a criatura caia em um sono de 3 horas.");
+             criatura();
              break;
             }
             else{
