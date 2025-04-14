@@ -57,7 +57,7 @@ public class Jogo {
             escolha_str = JOptionPane.showInputDialog(null, menu);
         
             if(escolha_str.equalsIgnoreCase("1")){
-                JOptionPane.showMessageDialog(null,"As tochas eram uma armadilha mágica\nvocê foi transportado para um labirinto ilusório e\nprecisará decifrar um enigma para escapar\nou ficará preso para sempre...");
+                JOptionPane.showMessageDialog(null,"As tochas eram uma armadilha mágica\nvocê foi transportado(a) para um labirinto ilusório e\nprecisará decifrar um enigma para escapar\nou ficará preso para sempre...");
                 //enigma (Adicionar)
                 break;
             }
